@@ -1,0 +1,33 @@
+server:
+    port: 8082
+
+spring:
+    application:
+        name: gu
+    config:
+        activate:
+            on-profile: dev
+    data:
+        redis:
+            host: 192.168.0.55
+            port: 6379
+
+    datasource:
+        driver-class-name: org.mariadb.jdbc.Driver
+        url: jdbc:mariadb://localhost:3305/sys?serverTimezone=Asia/Seoul
+        username: root
+        password: 12345678
+
+    servlet:
+        multipart:
+            max-file-size: 5000MB
+            max-request-size: 5000MB
+            location: ${user.dir/uploads}
+
+app-config:
+    file-upload:
+        thumbnail-path: /thumbnail
+        unzip-path: /images
+        base-path: ${user.dir}
+        upload-folder: /
+        max-size: 20971520000
