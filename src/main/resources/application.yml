@@ -4,9 +4,6 @@ server:
 spring:
     application:
         name: gu
-    config:
-        activate:
-            on-profile: dev
     data:
         redis:
             host: 192.168.0.55
