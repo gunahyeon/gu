@@ -1,3 +1,7 @@
+logging:
+    level:
+        root: INFO
+
 server:
     port: 8080
 
@@ -8,6 +12,9 @@ spring:
         redis:
             host: 192.168.0.55
             port: 6379
+
+    websocket:
+        message-size: 81920
 
     servlet:
         multipart:
@@ -22,3 +29,4 @@ app-config:
         base-path: ${user.dir}
         upload-folder: /
         max-size: 20971520000
+
