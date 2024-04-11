@@ -47,10 +47,9 @@ public class ThumbnailController {
 
         try {
             CompletableFuture<String> future = thumbnailService.generateThumbnails(taskId, roomId, files);
-            log.info("서버 파일 처리 완료11");
 
             String result = future.get();
-            log.info("서버 파일 처리 완료11111111111");
+
             return ApiResponse.toResponseEntity(ApiResponseCode.RESPONSE_OK, result);
         } catch (ExecutionException | InterruptedException e) {
             log.error(e.getMessage(), e);
